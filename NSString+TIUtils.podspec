@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NSString+TIUtils"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "A few basic methods for simplifying working with strings."
 
   s.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
 
-  s.source       = { :git => "https://github.com/thirdiron/NSString-TIUtils.git", :tag => "0.1.1" }
+  s.source       = { :git => "https://github.com/thirdiron/NSString-TIUtils.git", :tag => "0.1.2" }
 
   s.source_files  = 'Categories', 'Categories/**/*.{h,m}'
 
