@@ -20,8 +20,13 @@
     NSTextCheckingResult *firstMatch = matches[0];
     NSMutableArray *capturedGroups = [NSMutableArray arrayWithCapacity:firstMatch.numberOfRanges];
     
-    for(int i = 0; i < firstMatch.numberOfRanges; i++) {
-        capturedGroups[i] = [self substringWithRange:[firstMatch rangeAtIndex:i]];
+    for (NSUInteger i = 0; i < firstMatch.numberOfRanges; i++) {
+        NSRange range = [firstMatch rangeAtIndex:i];
+        if (range.location != NSNotFound) {
+            capturedGroups[i] = [self substringWithRange:range];
+        } else {
+            capturedGroups[i] = @"";
+        }
     }
     return capturedGroups;
 }
